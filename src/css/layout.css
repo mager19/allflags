@@ -1,0 +1,55 @@
+body {
+	font-family: "Anybody", cursive;
+}
+.header {
+	@apply py-4 mb-4;
+	border-bottom: 2px solid #f5f5f5;
+}
+
+.header p {
+	@apply text-text;
+}
+
+.logo {
+	@apply text-5xl uppercase text-text;
+	letter-spacing: 3px;
+}
+
+.containerFlags {
+	@apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 my-4;
+}
+
+.itemFlag {
+	@apply bg-secondary flex flex-col gap-4 px-4 cursor-pointer hover:bg-primary hover:text-white transition-all duration-300 ease-linear;
+	align-items: center;
+	border-radius: 5px;
+	display: flex;
+	min-height: 150px;
+	justify-content: center;
+	text-align: center;
+}
+
+.itemFlag img {
+	width: 50px;
+	height: auto;
+}
+
+input[type="search"] {
+	border: 2px solid #dbeddd;
+	border-radius: 25px;
+	padding: 5px 20px;
+	height: 50px;
+	width: 100%;
+}
+
+.button__region {
+	@apply bg-secondary px-8 py-2 hover:bg-primary hover:text-white hover:opacity-100;
+	border-radius: 25px;
+	flex: 1;
+	opacity: 0.4;
+}
+
+.button__region__selected {
+	@apply bg-primary text-white;
+	opacity: 1;
+}
