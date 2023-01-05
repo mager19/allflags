@@ -1,12 +1,20 @@
 import ItemFlag from "./ItemFlag";
+import { useNavigate } from "react-router-dom";
 
-function ContainerFlags({ data, search }) {
+function ContainerFlags({ data, search, setItemSelected, itemSelected }) {
 	if (search !== "") {
 		data = data.filter((item) => {
 			return (
 				item.name.common.toLowerCase().search(search.toLowerCase()) >= 0
 			);
 		});
+	}
+
+	const navigator = useNavigate();
+
+	function handleItemClick(item) {
+		const itemUrl = item.cca2.toLowerCase();
+		navigator(`/${itemUrl}`);
 	}
 
 	if (data.length > 0) {
@@ -27,7 +35,13 @@ function ContainerFlags({ data, search }) {
 		return (
 			<div className="containerFlags w-full">
 				{data.map((item, index) => {
-					return <ItemFlag item={item} key={index} />;
+					return (
+						<ItemFlag
+							item={item}
+							key={index}
+							onClick={handleItemClick}
+						/>
+					);
 				})}
 			</div>
 		);

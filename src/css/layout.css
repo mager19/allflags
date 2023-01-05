@@ -53,3 +53,35 @@ input[type="search"] {
 	@apply bg-primary text-white;
 	opacity: 1;
 }
+
+.itemCountry__single img {
+	width: 100px;
+	height: auto;
+}
+
+.button__maps {
+	@apply bg-primary text-white px-8 py-2 inline-block hover:bg-secondary hover:text-black;
+	border-radius: 25px;
+	flex: 1;
+}
+
+.info__country {
+	@apply bg-secondary w-full;
+}
+
+.info__country span {
+	@apply block py-4;
+	border-bottom: 1px solid #ccc;
+	font-size: 16px;
+}
+
+.info__country span:last-child {
+	border: none;
+}
+
+.info__country span strong {
+	@apply text-primary font-bold;
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin-right: 1rem;
+}

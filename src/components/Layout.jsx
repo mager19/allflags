@@ -9,6 +9,7 @@ import { useEffect } from "react";
 function Layout() {
 	const [search, setSearch] = useState("");
 	const [data, setData] = useState([]);
+	const [itemSelected, setItemSelected] = useState("");
 	const [selectedRegion, setSelectedRegion] = useState("America");
 	const [regions, setRegions] = useState([
 		{
@@ -96,7 +97,12 @@ function Layout() {
 						/>
 					</div>
 
-					<ContainerFlags data={data} search={search} />
+					<ContainerFlags
+						data={data}
+						search={search}
+						setItemSelected={setItemSelected}
+						itemSelected={itemSelected}
+					/>
 					<Footer />
 				</div>
 			</div>
